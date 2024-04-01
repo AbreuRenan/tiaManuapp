@@ -1,0 +1,82 @@
+.loginHeaderContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.loginHeaderh3{ 
+    font-family: 'Klee one', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: white;
+
+}
+.loginHeaderh1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    color: var(--amarelo1);
+}
+
+.loginScreenInputGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.loginScreenInputField {
+    padding: 14px;
+    width: 250px;
+    border: 2px solid var(--amareloSombra);
+    border-radius: 6px;
+    margin: 10px;
+    background-color: var(--amarelo3);
+    text-align: center;
+}
+.loginScreenInputField:focus-visible{
+    outline: none;
+    border-color: transparent;
+    background-color: var(--amarelo3);
+    box-shadow: 0 0 0 3px var(--amarelo1), 0 0 4px 6px var(--amarelo2) ;
+}
+
+.loginScreenInputBtn {
+    padding: 14px;
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid var(--amareloSombra);
+    box-shadow: 0 4px 0 0 var(--amareloSombra);
+    background-color: var(--amareloBotao);
+    margin: 10px auto;
+    transition: ease-in-out .1s;
+
+}
+.loginScreenInputBtn:hover{
+    filter: brightness(1.05);
+    box-shadow: 0 3px 0 0 var(--amareloSombra);
+    transform: translateY(1px);
+    transition: ease-in-out .1s;
+}
+.loginScreenInputBtn:active, .loginScreenInputBtn:focus-visible, .loginScreenInputBtn:focus-within {
+    box-shadow: 0 0px 0 0 var(--amareloSombra) inset;
+    transform: translateY(4px);
+    transition: ease-in-out .1s;
+    
+}
+.termosCondicoes {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--azul1);
+    font-size: 1rem;
+    border-bottom: 2px solid var(--azul1);
+}

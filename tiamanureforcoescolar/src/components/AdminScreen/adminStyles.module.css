@@ -1,0 +1,67 @@
+.screenContainer {
+  height: 100%;
+}
+
+.adminHeader {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.adminHeader > * {
+  color: white;
+}
+
+.adminHeader > p {
+  font-family: var(--klee);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.adminHeader > h1 {
+  font-family: var(--josefin);
+  font-size: 4rem;
+  color: var(--amarelo1);
+}
+
+.alunosListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+}
+.alunosListContainer>h1 {
+    font-family: var(--josefin);
+    font-size: 1.15rem;
+}
+
+.alunosList {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  min-height: 200px;
+}
+
+.alunoRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.alunoRow > .alunoItem {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.alunoRow > .alunoItem:first-of-type {
+  font-weight: 600;
+}
+.alunoRow > .alunoItem:nth-of-type(2) {
+    color: var(--verde2);
+  }
+
+.alunoRow > .alunoItem.atraso {
+    color: red;
+}

@@ -1,0 +1,9 @@
+.titleHeader {
+    display: flex;
+    height: 170px;
+    width: 100svw;
+    background-image: url('../../assets/bgHeader.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
