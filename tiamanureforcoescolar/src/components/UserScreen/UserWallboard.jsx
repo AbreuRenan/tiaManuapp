@@ -9,11 +9,13 @@ import styles from "./userStyles.module.css";
 
 import playIcon from "../../assets/playIcon.png";
 
-function UserWallboard() {
+function UserWallboard({data}) {
   const [msgSlidePos, setMsgSlidePos] = React.useState(0);
   const [doAnimation, setDoAnimation] = React.useState(false);
+  const [msgSlides, setMsgSlide] = React.useState([])
 
-  const msgSlides = [...loremIpsum];
+
+
   function handleSlideClick(value) {
     if (value > 0) setDoAnimation("right");
     if (value < 0) setDoAnimation("left");
@@ -29,6 +31,12 @@ function UserWallboard() {
       
     }, 500);
   }
+
+  React.useEffect( ()=>{
+    data.map( item => {
+      setMsgSlide([...msgSlides, item.msg])
+    })
+  },[])
 
   return (
     <div className={styles.userScreenContainer}>

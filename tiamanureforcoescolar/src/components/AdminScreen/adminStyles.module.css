@@ -2,6 +2,20 @@
   height: 100%;
 }
 
+.screenOptionsContainer>h1{
+  font-family: var(--josefin);
+}
+
+.screenOptionsContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* border: 20px red solid; */
+}
+.screenOptionsContainer h1{
+  font-family: var(--josefin);
+}
+
 .adminHeader {
   display: flex;
   flex-direction: column;
@@ -30,7 +44,6 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 20px;
 }
 .alunosListContainer>h1 {
     font-family: var(--josefin);
@@ -52,8 +65,8 @@
   gap: 10px;
 }
 .alunoRow > .alunoItem {
-  font-size: 1.25rem;
   text-transform: capitalize;
+  padding: 5px 0;
 }
 .alunoRow > .alunoItem:first-of-type {
   font-weight: 600;
@@ -64,4 +77,188 @@
 
 .alunoRow > .alunoItem.atraso {
     color: red;
+}
+
+.btnsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+  padding: 10px 0;
+  min-height: 20px;
+}
+.btnsContainer>.btnsContainer {
+  padding: 0;
+}
+.btnsContainerRow {
+  flex-direction: row;
+}
+
+.btnStyle {
+  width: 100%;
+  height: 50px;
+  padding: 14px;
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--josefin);
+  transition: ease-in-out .1s;
+  background-color: var(--amarelo3);
+  border: 2px solid var(--amarelo2);
+  box-shadow: 0 4px 0 0 var(--amareloSombra);
+}
+.btnStyle.azul {
+  border: 2px solid var(--azul3);
+  background-color: var(--azul2);
+  box-shadow: 0 4px 0 0 var(--azulSombra);
+}
+
+.btnStyle.vermelho {
+  background-color: var(--vermelho3);
+  border: 2px solid var(--vermelho2);
+  box-shadow: 0 4px 0 0 var(--vermelhoSombra);
+}
+.btnStyle:hover{
+    filter: brightness(1.05);
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.25);
+    transform: translateY(1px);
+    transition: ease-in-out .1s;
+}
+.btnStyle:active, .btnStyle:focus-visible {
+    box-shadow: 0 0px 0 0 rgba(0, 0, 0, 0.25);
+    transform: translateY(4px);
+    transition: ease-in-out .1s;
+}
+
+
+.menssageOptionsContainer {
+  background-color: white;
+  min-height: 350px;
+  padding: 20px;
+  margin: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+.menssageContainer {
+  font-family: var(--josefin);
+  background-color: var(--bg);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  min-height: 230px;
+  min-width: 280px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+.priorityContainer {
+  min-height: 50px;
+}
+.priorityContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.priorityContainer label {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+
+}
+.priorityContainer label>input {
+  width: 20px;
+  height: 20px;
+}
+
+.priorityContainer label:has(input:checked){
+  font-weight: 600;
+}
+
+.btnsContainer.resetSendBtns{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnsContainer.resetSendBtns>button{
+  min-width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: 0px;
+  background-color: #000055;
+  color: white;
+  font-family: var(--josefin);
+  font-size: 1.15rem;
+}
+.btnsContainer.resetSendBtns>button:first-of-type{
+  background-color: #8a8a8a;
+}
+
+.alunoDataContainer {
+  background-color: white;
+  width: calc(100% - 90px);
+  height: 100%;
+  margin: 20px 60px 10px 30px;
+  padding: 18px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 40% repeat(3, 20%);
+  column-gap: 5px;
+}
+.alunoDataContainer>* {
+  color: black;
+}
+.alunoDataContainer>h1 {
+  font-size: 1.5rem;
+  color: var(--amarelo1);
+  grid-column: 1 / span 2;
+}
+.alunoDataContainer>p{
+  display: flex;
+  align-items: center;
+  height: max-content;
+  color: var(--azul1);
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-wrap: nowrap;
+}
+.alunoDataContainer>p:nth-of-type(even) {
+  padding-left: 0px;
+}
+.regular {
+  text-transform: capitalize;
+  color: var(--verde2);
+  font-size: 0.75rem;
+
+}
+.diarioAlunoContainer{
+  margin-top: 10px
+}
+.diarioAlunoInput {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+}
+.diarioAlunoContainer>.btnsContainer{
+  justify-content: space-between;
+}
+.diarioAlunoContainer>.btnsContainer button {
+  width: 120px;
+  padding: 4px;
+  height: calc(30px + 4px);
+  border-radius: 20px;
+  border: none;
+  background-color: #8a8a8a;
+  color: white;
+  font-weight: 500;
+  font-family: var(--josefin);
+}
+.diarioAlunoContainer>.btnsContainer button:nth-of-type(2) {
+  background-color: #000055;
 }

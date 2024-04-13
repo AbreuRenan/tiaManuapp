@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router'
 function BackBtn() {
 const navigate = useNavigate();
 const location = useLocation();
-const arrowIcon = 'src/assets/back.png'
+const arrowIcon = '/src/assets/back.png'
 
 
     function backBtn() {

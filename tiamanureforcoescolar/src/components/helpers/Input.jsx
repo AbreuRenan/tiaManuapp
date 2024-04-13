@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ label = false, ...props }) {
+function Input({ label = false, textArea = false, ...props }) {
   const [inputState, setInputState] = React.useState('');
 
   function changeHandler({ target }) {
@@ -9,7 +9,8 @@ function Input({ label = false, ...props }) {
   return (
     <div>
       {label && <label>{label}</label>}
-      <input {...props} onChange={changeHandler} value={inputState}></input>
+      {!textArea && <input {...props} onChange={changeHandler} value={inputState}/>}
+      {textArea && <textarea  {...props} onChange={changeHandler} value={inputState} />}
     </div>
   );
 }

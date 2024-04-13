@@ -1,12 +1,22 @@
 {
   "1":{
     "nome":"Sofia",
+    "sobrenome": "da Silva",
     "statusPg":"regular",
-    "dataPg":"22/03"
+    "dataPg":"22/03",
+    "responsavel": "Mãe da Silva",
+    "escola": "Escola da Silva",
+    "serie": "5º ano",
+    "turma": "Manhã 1"
   },
   "2":{
     "nome":"Gustavo",
     "statusPg":"atraso",
-    "dataPg":"22/03"
+    "sobrenome": "da Silva",
+    "dataPg":"22/03",
+    "responsavel": "Mãe da Silva",
+    "escola": "Escola da Silva",
+    "serie": "2º ano",
+    "turma": "Manhã 1"
   }
 }

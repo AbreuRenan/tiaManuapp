@@ -1,17 +1,24 @@
 :root {
+  --bg: #F1F1F2;
   --amarelo1: #FBB54B;
   --amarelo2: #EADE70;
-  --amarelo3: #FFFFF5;
+  --amarelo3: #f3f3db;
   --amarelo4: #FFF7AC;
   --amareloSombra: rgba(138, 138, 0, 0.25);
   --amareloBorda: #E7C54B;
   --vermelho1: #FFA995;
+  --vermelho2: #EA7070;
+  --vermelho3: #f3dadb;
   --vermelhoBorda: #D44424; 
+  --vermelhoSombra: #d7b5b6; 
   --verdeBorda: #7DE74B;
   --verde1: #C7FAAF;
   --verde2: #2F9200;
   --amareloBotao: #F3F3DB;
   --azul1: #000055;
+  --azul2: #B2BFFF;
+  --azul3: #073ECE;
+  --azulSombra: #97a2d9;
 
   --josefin: 'Josefin Sans';
   --klee: 'Klee One';
@@ -37,7 +44,7 @@
 
 #root {
   height: 100svh;
-  width: 100svw;
+  width: 100%;
   background-color: #F1F1F2;
   min-height: 640px;
 }

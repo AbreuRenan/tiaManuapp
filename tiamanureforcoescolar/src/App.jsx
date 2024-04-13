@@ -7,8 +7,8 @@ import Logout from "./components/LoginScreen/Logout";
 import Home from "./components/Home";
 import TermosScreen from "./components/Termos/TermosScreen";
 import UserScreen from "./components/UserScreen/UserScreen";
-import AdminsHome from "./components/AdminScreen/AdminsHome";
 import RouterGuard from "./components/helpers/RouterGuard";
+import AdminScreen from "./components/AdminScreen/AdminScreen";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/user/*" element={<RouterGuard><UserScreen /></RouterGuard>} />
           <Route path="/termos" element={<RouterGuard><TermosScreen /></RouterGuard>} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="/admin/*" element={<RouterGuard><AdminsHome /></RouterGuard>} />
+          <Route path="/admin/*" element={<RouterGuard><AdminScreen /></RouterGuard>} />
         </Routes>
       </AppContextComponent>
     </BrowserRouter>

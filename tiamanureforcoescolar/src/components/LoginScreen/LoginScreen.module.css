@@ -67,7 +67,6 @@
     box-shadow: 0 0px 0 0 var(--amareloSombra) inset;
     transform: translateY(4px);
     transition: ease-in-out .1s;
-    
 }
 .termosCondicoes {
     position: absolute;
