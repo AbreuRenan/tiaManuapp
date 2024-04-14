@@ -1,26 +1,10 @@
 import React from "react";
-
-
-import { initializeApp } from "firebase/app";
 import { collection, getDoc, getDocs, getFirestore, query } from "firebase/firestore";
-import { get } from "firebase/database";
+import inicializarFirebaseApp from "./firebaseConfigs";
 
 
-function inicializarFirebaseApp() {
-  const firebaseConfig = {
-    apiKey: "AIzaSyCfYAzg0RYE3ZcJqZ5ymtfKwPLsnK85spE",
-    authDomain: "reforcoescolartiamanu.firebaseapp.com",
-    projectId: "reforcoescolartiamanu",
-    storageBucket: "reforcoescolartiamanu.appspot.com",
-    messagingSenderId: "654597599019",
-    appId: "1:654597599019:web:97f662ba9695b146e8df6e"
-  };
-  const app = initializeApp(firebaseConfig);
-  return getFirestore(app);
-}
 
 const db = inicializarFirebaseApp();
-
 
 export const AppContext = React.createContext();
 export function AppContextComponent({ children }) {
