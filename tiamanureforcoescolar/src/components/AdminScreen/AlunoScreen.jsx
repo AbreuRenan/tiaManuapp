@@ -5,6 +5,7 @@ import BackBtn from "../helpers/BackBtn";
 import Input from "../helpers/Input";
 
 import styles from "./adminStyles.module.css";
+import { AppContext } from "../../AppContext";
 
 function AlunoScreen() {
   const location = useLocation();
@@ -18,11 +19,7 @@ function AlunoScreen() {
     const msg = {
       msg: textArea.value
     }
-    const localData = JSON.parse(localStorage.getItem('m'))
-    if(localData.lenght !== 0) {
-      console.log(localData)
 
-    }
   }
   function clearForm(e){
     e.preventDefault();

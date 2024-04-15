@@ -4,29 +4,14 @@ import BackBtn from "../helpers/BackBtn";
 
 import styles from "./adminStyles.module.css";
 import { useNavigate } from "react-router";
-
-const url = "src/components/AdminScreen/alunosMock.json";
+import { AppContext } from "../../AppContext";
 
 function AdminHome() {
-  const [alunosLista, setAlunosLista] = React.useState([]);
+  const { alunosList } = React.useContext(AppContext);
+
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const jsonData = await response.json();
-        //   setAlunosLista(jsonData)
-        const newAlunoList = [];
-        for (let key in jsonData) {
-          newAlunoList.push(jsonData[key]);
-        }
-        setAlunosLista(newAlunoList);
-      } catch (error) {
-        console.error("Erro ao buscar os dados:", error);
-      }
-    };
-    fetchData();
   }, []);
 
   return (
@@ -43,7 +28,7 @@ function AdminHome() {
           <div className={styles.alunosListContainer}>
             <h1>Lista de Alunos</h1>
             <div className={styles.alunosList}>
-              {alunosLista.map((aluno, index) => {
+              {alunosList.map((aluno, index) => {
                 return (
                   <div
                     key={index}

@@ -1,8 +1,12 @@
 import React from "react";
-import { collection, getDoc, getDocs, getFirestore, query } from "firebase/firestore";
-import inicializarFirebaseApp from "./firebaseConfigs";
-
-
+import {
+  collection,
+  getDoc,
+  getDocs,
+  getFirestore,
+  query,
+} from "firebase/firestore";
+import { inicializarFirebaseApp } from "./firebaseConfigs";
 
 const db = inicializarFirebaseApp();
 
@@ -14,24 +18,33 @@ export function AppContextComponent({ children }) {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   async function getAlunosList() {
-    const docsRef = collection(db,"alunos");
+    const docsRef = collection(db, "alunos");
     const snapshot = await getDocs(docsRef);
-    snapshot.forEach( doc => {
-      console.log(doc.data())
-    })
+    const newAlunoList = snapshot.docs.map((doc) => {
+      const data = doc.data();
+      data.id = doc.id;
+      return data;
+    });
+    setAlunosList(newAlunoList);
+    console.log(alunosList);
   }
 
-  getAlunosList()
+  React.useEffect(() => {
+    getAlunosList();
+  }, []);
 
-
-  
   return (
     <AppContext.Provider
       value={{
-        userData, setUserData,
-        alunosList, setAlunosList,
-        isLoggedIn, setIsLoggedIn,
-        isLoading, setIsLoading,
+        getAlunosList,
+        userData,
+        setUserData,
+        alunosList,
+        setAlunosList,
+        isLoggedIn,
+        setIsLoggedIn,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}
